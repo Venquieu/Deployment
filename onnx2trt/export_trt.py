@@ -81,14 +81,14 @@ def export(
     )
     config.add_optimization_profile(profile)
 
-    engineString = builder.build_serialized_network(network, config)
-    if engineString == None:
+    engine_string = builder.build_serialized_network(network, config)
+    if engine_string == None:
         print("Failed building engine!")
         return False
 
     print("Succeeded building engine!")
     with open(output_path, "wb") as f:
-        f.write(engineString)
+        f.write(engine_string)
 
     return True
 

@@ -94,6 +94,9 @@ class Trainer:
 
 
 def main(args):
+    init_seed()
+    setenv()
+
     trainer = Trainer(args.epochs, args.batch, args.work_dir)
     trainer.run()
 
